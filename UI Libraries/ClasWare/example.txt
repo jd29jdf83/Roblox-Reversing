@@ -1,0 +1,68 @@
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/xaxaxaxaxaxaxaxaxa/Libraries/main/Ui's/Ciazware.lua"))();
+library.configuration = {
+   frames = {
+       MainBackFrameColor = Color3.fromRGB(138, 138, 138), -- the very back border's color
+       BorderColor = Color3.fromRGB(50, 50, 50), -- the outline border color of every element (element = toggle, textbox, etc)
+       InlineBorderColor = Color3.fromRGB(10, 10, 10), -- the inline border color of every frame in the ui
+   },
+
+   elements = {
+       BorderColor = Color3.fromRGB(50, 50, 50), -- the outline border color of every element (element = toggle, textbox, etc)
+       InlineBorderColor = Color3.fromRGB(10, 10, 10), -- the inline border color of every element (element = toggle, textbox, etc)
+   },
+   
+   text = {
+       Color = Color3.fromRGB(255, 255, 255), -- the color of the everything in the ui that has the TextColor3 property
+       Font = "Code", -- the font of everything in the ui that has the Font property
+   },
+   
+   miscellaneous = {
+       BackgroundGlowColor = Color3.fromRGB(255, 255, 255), -- the color of the back ground glow of the ui
+       TabHighlightColor = Color3.fromRGB(30, 30, 30), -- The BackGroundColor3 of tab and sub-tabs/sections when you click them
+           
+       DisplayFpsAndPing = true, -- displays your fps and ping in the top right corner of the ui
+       UIToggleKey = Enum.KeyCode.RightAlt, -- the key to toggle the ui's Visible property on/true and off/false
+   },
+};
+
+local ui = library.new("ui title here");
+local tab = ui.AddTab("tab name")
+local section = tab.AddSection();
+
+local subsection = section.AddSubSection("sub tab/section name");
+local LeftSideFrame, RightSideFrame = "Left", "Right"
+
+-- toggle
+local toggle = subsection.AddToggle("toggle", function(state)
+      print(tostring(state));
+end, LeftSideFrame)
+
+toggle.AddToolTip("tooltip for a toggle")
+
+-- textbox
+local textbox = subsection.AddTextBox("textbox", function(text)
+      print(text);
+end, LeftSideFrame);
+
+textbox.AddToolTip("tooltip for a textbox")
+
+-- dropdown
+local dropdown = subsection.AddDropdown("dropdown", {"option 1", "option 2", "option 3", "option 4"}, function(text)
+      print(text);
+end, LeftSideFrame);
+
+dropdown.AddToolTip("tooltip for a dropdown")
+
+-- slider
+local slider = subsection.AddSlider("slider", function(number)
+      print(tostring(number));
+end, LeftSideFrame, {Minimum = 50, Maximum = 150, Default = 5});
+
+slider.AddToolTip("tooltip for a slider")
+
+-- keybind
+local keybind = subsection.AddKeybind("keybind", function(state)
+      print(tostring(state));
+end, LeftSideFrame);
+
+keybind.AddToolTip("tooltip for a keybind")
