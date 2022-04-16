@@ -1,0 +1,43 @@
+local Window = Library:Window({text = "NEVERLOSE"})
+
+--//First tab section
+local TS = Window:TabSection({text = "Ur mother"})
+local T = TS:Tab({text = "Mother of nature!", icon = "idk lol"})
+
+--// Second tab section
+local TS2 = Window:TabSection({text = "OK"})
+local T2 = TS2:Tab({text = "Ye im not gay"})
+
+--// Section setup
+local S1 = T:Section({text = "Niggering"})
+local S2 = T:Section({text = "XD"})
+
+local S3 = T2:Section({text = "Hog Rider Happy"})
+
+--// Inner setup
+S1:Toggle({text = "wanna have sex", state = false, callback = function(arg)
+    print("GO:", arg)
+end})
+
+S1:Dropdown({text = "Proof", default = "humanoid", list = {"No", "humanoid", "farting"}, callback = function(arg)
+    print("XD:", arg)
+end})
+
+S1:Textbox({text = "bro", value = "sex?", callback = function(arg)
+    print(arg)
+end})
+
+--// Inner setup 2
+
+S2:Keybind({text = "Wow me", default = Enum.KeyCode.E, callback = function(arg)
+    print("Dank memer,", arg)
+end})
+
+
+S3:Slider({text = "FOV", min = 70, max = 120, callback = function(arg)
+    game.Workspace.Camera.FieldOfView = tonumber(arg)
+end})
+
+S3:Slider({text = "Float", min = 70, max = 120, float = 0.7, callback = function(arg)
+    print(arg)
+end})
