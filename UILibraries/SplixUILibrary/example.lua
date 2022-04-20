@@ -1,16 +1,3 @@
---[[
- ___  __    ________     
-|\  \|\  \ |\   ____\    
-\ \  \/  /|\ \  \___|    
- \ \   ___  \ \  \       
-  \ \  \\ \  \ \  \____  
-   \ \__\\ \__\ \_______\
-    \|__| \|__|\|_______|
-                         
-                         
-leaked on 3/18/22
-https://killermemez.xyz/
-]]
 
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/loadstring/uilibraries/main/splix.lua"))()
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
