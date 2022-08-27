@@ -1,0 +1,35 @@
+local httpGet = game.HttpGet;
+local library = loadstring(httpGet(game, "https://nomercy.rip/files/library.lua"))({cheatname = "example ui", gamename = "gamer"});
+library:init();
+
+local menu = library.NewWindow({title = "example ui"});
+local combatTab = menu:AddTab("Combat");
+local combatAimAssist = combatTab:AddSection("Aim Assist", 1);
+local thing = combatAimAssist:AddToggle({text = "Enabled", flag = "dwwdwdwdwd"});
+thing:AddColor({flag = "color"}):SetColor(Color3.fromRGB(255,255,255))
+combatAimAssist:AddToggle({text = "Enabled", flag = "dwwdwdwdwd", callback = function(toggle)
+   print(toggle)
+end});
+combatAimAssist:AddSlider({text = "FOV", flag = "slider", value = 0, min = 0, max = 100, callback = function(val)
+   print(val)
+end});
+combatAimAssist:AddList({text = "Hitpart", flag = "dropdown",tooltip = "gamer tooltip", values = {"Head", "Torso"}, callback = function(str)
+   print(str)
+end});
+combatAimAssist:AddButton({text = "Reset Settings", flag = "button",tooltip = "gamer tooltip2", callback = function(str)
+   print(str)
+end});
+combatAimAssist:AddSeparator({text = "Separator"})
+combatAimAssist:AddBox({text = "TextBox", flag = "textbox",tooltip = "gamer tooltip3", input = "gamer input", callback = function(str)
+   print(str)
+end});
+combatAimAssist:AddColor({text = "Color", flag = "colorpicker",tooltip = "gamer tooltip4", color = Color3.fromRGB(255,255,255), trans = 0.5, callback = function(str)
+   print(str)
+end});
+combatAimAssist:AddBind({text = "Bind", flag = "Keybind",tooltip = "gamer tooltip5",mode = "toggle", callback = function(str)
+   print(str)
+end});
+
+
+
+local settings = library:CreateSettingsTab(menu);
