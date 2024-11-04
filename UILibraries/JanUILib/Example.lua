@@ -1,15 +1,3 @@
---[[
-    __   _ ____                                                                     
-   / /__(_) / /__  _________ ___  ___  ____ ___  ___  ____     _________  _________ 
-  / //_/ / / / _ \/ ___/ __ `__ \/ _ \/ __ `__ \/ _ \/_  /    / ___/ __ \/ ___/ __ \
- / ,< / / / /  __/ /  / / / / / /  __/ / / / / /  __/ / /_   / /__/ /_/ / /  / /_/ /
-/_/|_/_/_/_/\___/_/  /_/ /_/ /_/\___/_/ /_/ /_/\___/ /___/   \___/\____/_/  / .___/ 
-                                                                           /_/      
-released on 12/14/21
-
-leak by KC
-]]
-
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/loadstring/uilibraries/main/jansuilib.lua", true))();
 local watermark = Lib:CreateWatermark("Test Watermark | FPS: {fps}", Vector2.new(492, 588))
 local window = Lib:CreateWindow(
